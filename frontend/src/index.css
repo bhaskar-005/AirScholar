@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-gradient-yellow{
+    -webkit-box-shadow:0px 0px 99px 26px rgba(255, 245, 46, 0.089);
+    -moz-box-shadow: 0px 0px 99px 26px rgba(255, 245, 46, 0.135);
+    box-shadow: 0px 0px 99px 26px rgba(255, 245, 46, 0.174);
+
+}
+.bg-gradient-green{
+    -webkit-box-shadow:0px 0px 99px 26px rgba(46, 255, 91, 0.161);
+-moz-box-shadow: 0px 0px 99px 26px rgba(46, 255, 91, 0.161);
+box-shadow: 0px 0px 99px 26px rgba(46, 255, 91, 0.204);
+
+}
+
+.bg-gradient-blue{
+    -webkit-box-shadow:0px 0px 99px 26px rgba(46, 168, 255, 0.532);
+-moz-box-shadow: 0px 0px 99px 26px rgba(46, 60, 255, 0.612);
+box-shadow: 0px 0px 99px 26px rgba(46, 206, 255, 0.3);
+}
+
+
+.active{
+    color: rgb(0, 89, 255);
+}
+
+.div-gradien{
+    
+        /* global 94%+ browsers support */
+        background: linear-gradient(180deg, rgba(252, 254, 255, 1) 84%, rgba(202, 228, 255, 1) 100%);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    --color: #e1e1e1bb;
+    background-color: white;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+    box-shadow: inset 0 0  180px white; /* Add a white inset shadow */
+}
+
+.shadow-box{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.banner{
+    background: rgb(29,110,189);
+    background: -moz-linear-gradient(74deg, rgba(29,110,189,1) 0%, rgba(84,178,247,1) 100%);
+    background: -webkit-linear-gradient(74deg, rgba(29,110,189,1) 0%, rgba(84,178,247,1) 100%);
+    background: linear-gradient(74deg, rgba(29,110,189,1) 0%, rgba(84,178,247,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d6ebd",endColorstr="#54b2f7",GradientType=1);}
