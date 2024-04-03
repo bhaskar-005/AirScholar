@@ -4,6 +4,7 @@ import { CgLoadbarDoc } from "react-icons/cg";
 import {  MdSupport } from "react-icons/md";
 import { ImBubbles4 } from "react-icons/im";
 import { VscFeedback } from "react-icons/vsc";
+import Footer from "../components/home/Footer";
 
 const About = () => {
   const items = [
@@ -106,6 +107,7 @@ const About = () => {
           </div>
         </section>
       </div>
+      <Footer/>
     </>
   );
 };

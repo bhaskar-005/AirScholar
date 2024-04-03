@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import Footer from "../components/home/Footer";
 
 
 const Home = () => {
@@ -246,6 +247,10 @@ const Home = () => {
       <section>
         <InstructorSection />
       </section>
+       
+       <Footer/>
+       
+       
     </div>
   );
 }
