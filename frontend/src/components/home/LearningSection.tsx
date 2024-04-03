@@ -1,4 +1,3 @@
-import React from "react";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Compare_with_others from '../../assets/Compare_with_others.png';
 import Know_your_progress from '../../assets/Know_your_progress.png';

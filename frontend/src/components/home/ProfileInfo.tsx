@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import about from '../../assets/about.png'
 import { TbDeviceDesktopAnalytics } from 'react-icons/tb';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/Store';
-import Loading from '../Loading';
+
 
 const ProfileInfo = () => {
    const {User} = useSelector((state:RootState)=>state.profile)

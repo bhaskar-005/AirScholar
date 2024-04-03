@@ -13,10 +13,9 @@ import { CgDisplayFullwidth } from "react-icons/cg";
 import { LuAward } from "react-icons/lu";
 import { IoPeopleSharp } from "react-icons/io5";
 import { MdOndemandVideo } from "react-icons/md";
-import { FaRegStar, FaStar } from "react-icons/fa6";
-import ReactStars from "react-stars";
 import { averageRating } from "../util/averageRating";
 import toast from "react-hot-toast";
+import ReactStars from "react-stars";
 
 const CourseDetail = () => {
   const courseId = useParams();

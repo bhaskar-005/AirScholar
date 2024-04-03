@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import BlueButton from '../components/buttons/BlueButton';
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { forgotPassword } from '../api/api-function/auth-api';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store/Store';
-import toast from 'react-hot-toast';
+
 
 const ForgotPassword = () => {
     const [sendEmail , setsendEmail] = useState<boolean>(false);

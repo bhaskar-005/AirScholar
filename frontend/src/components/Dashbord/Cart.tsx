@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import about from "../../assets/about.png";
 import ReactStars from "react-stars";
 import IconButton from "../buttons/IconButton";
 import { MdOutlineDelete } from "react-icons/md";

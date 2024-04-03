@@ -1,30 +1,27 @@
-import  { useState } from 'react';
 import { sidebarLinks } from '../../data/Sidebar';
-import { useNavigate } from 'react-router-dom';
 import SideLinks from './SideLinks';
-import { VscSignOut } from 'react-icons/vsc';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/Store';
 import Loading from '../Loading';
-import Modal from '../Modal';
-import toast from 'react-hot-toast';
-import { setUser } from '../../redux/slice/ProfileSlice';
-import { setToken } from '../../redux/slice/authSlice';
+// import Modal from '../Modal';
+// import toast from 'react-hot-toast';
+// import { setUser } from '../../redux/slice/ProfileSlice';
+// import { setToken } from '../../redux/slice/authSlice';
 
 
 const Bottombar = () => {
   const { User } = useSelector((state:RootState)=>state.profile);
-  const [logoutModal , setLogoutModal] = useState<null|object>(null);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const [logoutModal , setLogoutModal] = useState<null|object>(null);
+  // const navigate = useNavigate();
+  // const dispatch = useDispatch();
  
-  const logoutFunction = ()=>{
-    localStorage.removeItem('token');
-    dispatch(setToken(null));
-    dispatch(setUser(null));
-    toast.success('logout successful');
-    navigate('/');
-  }
+  // const logoutFunction = ()=>{
+  //   localStorage.removeItem('token');
+  //   dispatch(setToken(null));
+  //   dispatch(setUser(null));
+  //   toast.success('logout successful');
+  //   navigate('/');
+  // }
   if(!User){
     return <Loading/>
   }
@@ -60,7 +57,7 @@ const Bottombar = () => {
          </button>*/}
         </div> 
        {
-        logoutModal && <Modal modalData={logoutModal}/>
+        // logoutModal && <Modal modalData={logoutModal}/>
        }
     </div>
   );

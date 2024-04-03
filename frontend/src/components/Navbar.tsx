@@ -1,14 +1,11 @@
-import React from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
 import { NavbarLinks } from "../data/NavbarLinks";
 import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import BlueButton from "./buttons/BlueButton";
 import {  FaCaretDown } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { RootState } from "../redux/store/Store";
 import ProfileInfo from "./home/ProfileInfo";
-import { SetCategory } from "../redux/slice/authSlice";
 
 const Navbar = () => {
   const {token} = useSelector((state:RootState)=> state.auth);

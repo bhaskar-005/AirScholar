@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/Store";
 import { BsUpload } from "react-icons/bs";
 import { profilePhotoUpdate } from "../../../api/api-function/profile-api";
@@ -10,7 +10,7 @@ import IconButton from "../../buttons/IconButton";
 export default function ChangeProfilePicture() {
   const { token } = useSelector((state: RootState) => state.auth);
   const { User } = useSelector((state: RootState) => state.profile);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(false);
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -47,7 +47,7 @@ export default function ChangeProfilePicture() {
       formData.append("ProfilePicture", imageFile); 
 
       console.log("formData", formData);
-        // await profilePhotoUpdate(formData, token, dispatch);
+        await profilePhotoUpdate(formData, token);
       }
     } catch (error) {
       console.error("Error occurred while uploading:", error);

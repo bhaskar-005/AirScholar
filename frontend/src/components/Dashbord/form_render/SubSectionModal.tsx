@@ -1,5 +1,5 @@
 import { RootState } from '../../../redux/store/Store';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createSubsection } from '../../../api/api-function/coures-api';
 import toast from 'react-hot-toast';

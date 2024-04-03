@@ -31,7 +31,7 @@ export const refreshToken = async(token:any , dispatch:Function)=>{
 export const sendOtp = async (email: string, navigate:Function, dispatch:Function) => {
     dispatch(loading(true));
     try {
-    const res = await axiosCall('post', endpoints.SENDOTP_API, {
+    await axiosCall('post', endpoints.SENDOTP_API, {
       email,
       checkUserPresent: true,
     });
@@ -50,7 +50,7 @@ export const sendOtp = async (email: string, navigate:Function, dispatch:Functio
 export const signUp = async (data: any, navigate:Function , dispatch:Function) => {
     dispatch(loading(true));
     try {        
-    const res = await axiosCall('post', endpoints.SIGNUP_API, data);
+    await axiosCall('post', endpoints.SIGNUP_API, data);
 
     toast.success("signup successful");
     navigate('/login');

@@ -1,4 +1,3 @@
-import React, { HtmlHTMLAttributes } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import BlueButton from '../buttons/BlueButton';
 import SecondaryButton from '../buttons/SecondaryButton';

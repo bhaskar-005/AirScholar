@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import OtpInput from 'react-otp-input';
 import BlueButton from '../components/buttons/BlueButton';
 import { signUp } from '../api/api-function/auth-api';

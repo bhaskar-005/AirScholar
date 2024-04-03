@@ -1,8 +1,7 @@
-import React from 'react';
 import Input from '../components/input/Input';
 import { useForm, SubmitHandler } from "react-hook-form";
 import BlueButton from '../components/buttons/BlueButton';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import { resetPassword } from '../api/api-function/auth-api';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store/Store';

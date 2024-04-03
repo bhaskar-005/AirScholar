@@ -5,7 +5,8 @@ import { setUser } from "../../redux/slice/ProfileSlice";
 
 
 //update profile pic
-export const profilePhotoUpdate = async(data:any,token:any,dispatch:Function)=>{
+export const profilePhotoUpdate = async(data:any,token:any,//dispatch:Function
+)=>{
     try {
         const res = await axiosCall(
             "post",
@@ -20,7 +21,7 @@ export const profilePhotoUpdate = async(data:any,token:any,dispatch:Function)=>{
             // dispatch(setUser())
         }
 
-    } catch (error) {
+    } catch (error:any) {
         console.log(error);
         toast.error(error.message);
         

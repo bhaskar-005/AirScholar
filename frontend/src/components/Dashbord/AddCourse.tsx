@@ -1,4 +1,3 @@
-import React from "react";
 import FormRender from "./FormRender";
 
 const AddCourse = () => {

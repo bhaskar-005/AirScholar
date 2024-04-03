@@ -1,4 +1,3 @@
-import BlueButton from "../components/buttons/BlueButton";
 import ContactForm from "../components/contect/ContactForm";
 import about from '../assets/about.png';
 import { CgLoadbarDoc } from "react-icons/cg";

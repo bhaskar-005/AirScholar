@@ -1,4 +1,3 @@
-import React from 'react';
 import IconButton from '../../buttons/IconButton';
 import { TbEdit } from 'react-icons/tb';
 import { useSelector } from 'react-redux';

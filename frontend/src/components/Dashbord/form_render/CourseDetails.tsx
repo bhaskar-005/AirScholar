@@ -46,7 +46,7 @@ const CourseDetails = () => {
   
     //creating the course
     const createCourse = async()=>{
-     const res = await CreateCourseFunction(courseData , token,dispatch);
+     await CreateCourseFunction(courseData , token,dispatch);
     }
     createCourse();
   }
@@ -57,10 +57,9 @@ const CourseDetails = () => {
 
     if (file) {
       setFile(file);
-
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result);
+        setImagePreview(reader.result as any);
       };
       reader.readAsDataURL(file);
     } else {

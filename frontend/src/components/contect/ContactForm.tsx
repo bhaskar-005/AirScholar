@@ -1,8 +1,6 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "../input/Input";
 import BlueButton from "../buttons/BlueButton";
-import { Link } from "react-router-dom";
 import { ContectForm } from "../../api/api-function/auth-api";
 
 type Inputs = {

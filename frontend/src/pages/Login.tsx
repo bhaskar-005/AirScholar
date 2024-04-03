@@ -1,10 +1,10 @@
-import React from 'react';
 import Input from '../components/input/Input';
 import { useForm, SubmitHandler } from "react-hook-form";
 import BlueButton from '../components/buttons/BlueButton';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../api/api-function/auth-api';
 import { useDispatch } from 'react-redux';
+import MaxWidthWrapper from '../components/MaxWidthWrapper';
 
 const Login = () => {
   type Inputs = {
@@ -25,9 +25,9 @@ const {
     login(data , navigate , dispatch);
   }
   return (
-    
+    <MaxWidthWrapper>
     <div className='flex justify-center mt-[90px]  '>
-      <form  onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-[25%] w-[80%] gap-3'>
+      <form  onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-[40%] w-[80%] gap-3'>
     
      
       <Input 
@@ -50,6 +50,7 @@ const {
        <BlueButton type={'submit'} text={'Log In'} className={'mt-5'}/>
     </form>
     </div>
+    </MaxWidthWrapper>
     
 )
 }

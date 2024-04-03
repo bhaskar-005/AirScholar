@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { getFullAccessCourse } from '../api/api-function/coures-api';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store/Store';

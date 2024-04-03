@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
-import about from '../../assets/about.png';
+import {  useSelector } from 'react-redux';
 import ReactStars from 'react-stars';
 import ProgressBar from "@ramonak/react-progress-bar";
 import { RootState } from '../../redux/store/Store';

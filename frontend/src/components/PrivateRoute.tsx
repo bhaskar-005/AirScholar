@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store/Store';
 import { Outlet, useNavigate } from 'react-router-dom';
-import React from 'react';
 
-const PrivateRoute = ( ) => { // Fix the spelling of 'children'
+
+const PrivateRoute = ( ) => { 
   const navigate = useNavigate();
   const { User } = useSelector((state: RootState) => state.profile);
   

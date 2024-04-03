@@ -1,9 +1,5 @@
-import React from 'react';
 import girlimg from '../../assets/girlimg.png'
-import ok from '../../assets/ok.webp'
 import MaxWidthWrapper from '../MaxWidthWrapper';
-import BlueButton from '../buttons/BlueButton';
-import { TbChecks, TbDiscountCheck, TbDiscountCheckFilled } from 'react-icons/tb';
 import { LiaCheckCircleSolid } from 'react-icons/lia';
 
 const ExploreMore = () => {

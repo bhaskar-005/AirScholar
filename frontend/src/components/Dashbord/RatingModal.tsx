@@ -1,5 +1,5 @@
 import { RootState } from '../../redux/store/Store';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 import ReactStars from 'react-stars';
 import { useState } from 'react';

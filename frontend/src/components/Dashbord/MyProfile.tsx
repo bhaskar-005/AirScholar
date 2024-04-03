@@ -1,7 +1,5 @@
-import React from 'react';
 import IconButton from '../buttons/IconButton';
 import { TbEdit } from "react-icons/tb";
-import girlimg from '../../assets/girlimg.png'
 import About from './myprofile/About';
 import Allinfo from './myprofile/Allinfo';
 import { useSelector } from 'react-redux';

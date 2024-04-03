@@ -1,8 +1,6 @@
 import toast from "react-hot-toast";
 import { axiosCall } from "../axios-instence";
 import { paymentEndpoints } from "../api-endpoint";
-import rzp from '../../assets/rzp.png';
-import useRazorpay from "react-razorpay";
 import { resetCart } from "../../redux/slice/cartSlice";
 
 

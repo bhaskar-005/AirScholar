@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import MaxWidthWrapper from '../components/MaxWidthWrapper';
 import { color } from '../colors/color';

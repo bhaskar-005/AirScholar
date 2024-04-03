@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { sidebarLinks } from '../../data/Sidebar';
 import { useNavigate } from 'react-router-dom';
 import SideLinks from './SideLinks';
 import { VscSignOut } from 'react-icons/vsc';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/Store';
-import Loading from '../Loading';
 import Modal from '../Modal';
 import toast from 'react-hot-toast';
 import { setUser } from '../../redux/slice/ProfileSlice';

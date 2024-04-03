@@ -1,4 +1,3 @@
-import React from 'react';
 import Input from '../components/input/Input';
 import { useForm, SubmitHandler } from "react-hook-form";
 import BlueButton from '../components/buttons/BlueButton';
@@ -7,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setSignUpData } from '../redux/slice/authSlice';
 import { sendOtp } from '../api/api-function/auth-api';
 import toast from 'react-hot-toast';
+import MaxWidthWrapper from '../components/MaxWidthWrapper';
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -36,9 +36,9 @@ const {
     
   }
   return (
-    
+    <MaxWidthWrapper>
     <div className='flex justify-center mt-[90px]  '>
-      <form  onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-[25%] w-[80%] gap-3'>
+      <form  onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-[40%] w-[80%] gap-3'>
       
       <div className='flex flex-row justify-between gap-2'>
       <Input 
@@ -110,7 +110,7 @@ const {
        <BlueButton type={'submit'} text={'Register'} className={'mt-5'}/>
     </form>
     </div>
-    
+    </MaxWidthWrapper>
 )
 }
 

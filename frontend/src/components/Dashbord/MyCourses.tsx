@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import about from '../../assets/about.png';
+import  { useEffect, useState } from 'react';
 import { MdDelete, MdOutlinePublishedWithChanges,MdUnpublished } from "react-icons/md";
 import { FaEdit } from 'react-icons/fa';
 import IconButton from '../buttons/IconButton';
