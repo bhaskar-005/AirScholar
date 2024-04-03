@@ -1,3 +1,4 @@
+![Alt text]([https://imgtr.ee/images/2024/04/03/a31ef125e7141a0304c5ce420abce91e.png])
 # AirScholar
 
 Welcome to AirScholar - Your destination for seamless online learning! Whether you're an educator or a learner, AirScholar offers an easy-to-use platform to create, sell, and buy courses.
@@ -13,6 +14,7 @@ Welcome to AirScholar - Your destination for seamless online learning! Whether y
 - 🔒 **Secure Authentication**: Protect your account with robust authentication measures for added security and peace of mind.
 - 🔑 **Forgot Password**: Easily reset your password if you forget it. ([Reset Password](#))
 - 🔄 **Password Change**: Update your password conveniently from your account settings. ([Change Password](#))
+
 
 Visit [AirScholar](https://air-scholar.vercel.app/) to explore more!
 
