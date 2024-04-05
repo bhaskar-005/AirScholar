@@ -26,7 +26,6 @@ import CourseDetail from "./pages/CourseDetail";
 import InstructorDashboard from "./components/Dashbord/InstructorDashboard";
 import EditCourse from "./components/Dashbord/EditCourse";
 import Settings from "./components/Dashbord/Settings";
-import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const {token} = useSelector((state:RootState)=>state.auth);
