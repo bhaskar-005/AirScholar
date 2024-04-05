@@ -53,19 +53,18 @@ function App() {
         <Route path="/verify-email" element={<OtpValidation />} />
         <Route path="/update-password/:id" element={<ResetPassword />} />
        
-        <Route path="" element={<PrivateRoute/>}>
-         <Route path="/dashboard" element={<Dashbord />} >
-           <Route path="profile" element={<MyProfile />} />
-           <Route path="enrolled-courses" element={<EnrolledCourses />} />
-           <Route path="cart" element={<Cart />} />
-           <Route path="my-courses" element={<MyCourses />} />
-           <Route path="add-course" element={<AddCourse />} />
-           <Route path="/dashboard/instructor" element={<InstructorDashboard />} />
-           <Route path="/dashboard/Settings" element={<Settings/> }/>
-           <Route path="/dashboard/edit/:id" element={<EditCourse/>}/>
+         <Route path="/dashboard" element={token? <Dashbord />:<Login />} >
+           <Route path="profile" element={token? <MyProfile />:<Login />} />
+           <Route path="enrolled-courses" element={token? <EnrolledCourses />:<Login />} />
+           <Route path="cart" element={token? <Cart />:<Login />} />
+           <Route path="my-courses" element={token? <MyCourses />:<Login />} />
+           <Route path="add-course" element={token? <AddCourse />:<Login />} />
+           <Route path="/dashboard/instructor" element={token? <InstructorDashboard />:<Login />} />
+           <Route path="/dashboard/Settings" element={token? <Settings/>:<Login />}/>
+           <Route path="/dashboard/edit/:id" element={token? <EditCourse/>:<Login />}/>
         </Route>
-        <Route path="/viewCourse/:id" element={<ViewCourse />} />
-      </Route>
+        <Route path="/viewCourse/:id" element={token?<ViewCourse />:<Login/>} />
+     
 
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<CourseDetail />} />
