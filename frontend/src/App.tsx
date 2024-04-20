@@ -31,11 +31,14 @@ function App() {
   const {token} = useSelector((state:RootState)=>state.auth);
   const dispatch = useDispatch();
   
-  useEffect(() => {
-    getCategory(dispatch)
+  const initailCall = async()=>{
     if (localStorage.getItem('token')) {
       refreshToken(token, dispatch);
     }
+    await getCategory(dispatch);
+  }
+  useEffect(() => {
+   initailCall()
   }, [token]);
 
   return (
