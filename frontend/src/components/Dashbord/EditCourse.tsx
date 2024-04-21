@@ -15,10 +15,10 @@ export default function EditCourse() {
   useEffect(() => {
     ;(async () => {
       setLoading(true)
-      console.log(courseId);
+      
       if (courseId) {
         const result = await getFullAccessCourse(courseId, token , dispatch)
-        console.log(result);
+        
         if (result) {
             setcourse(result)
           }

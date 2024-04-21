@@ -46,7 +46,6 @@ export default function ChangeProfilePicture() {
       const formData = new FormData();
       formData.append("ProfilePicture", imageFile); 
 
-      console.log("formData", formData);
         await profilePhotoUpdate(formData, token);
       }
     } catch (error) {

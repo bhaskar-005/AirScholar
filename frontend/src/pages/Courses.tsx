@@ -21,8 +21,7 @@ const Courses = () => {
   if (loading) {
     return <Loading/>
   }
-  console.log(course);
-  
+
   return (
     <div className=' flex justify-center '>
     <div className= ' max-w-[1200px] my-[80px] flex flex-row sm:gap-5 gap-1 flex-wrap justify-center'>

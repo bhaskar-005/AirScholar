@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
-import { averageRating, averageRatingOnlyId } from '../../util/averageRating';
+import { averageRatingOnlyId } from '../../util/averageRating';
 
 const CourseCard = ({id, image ,title  , instructor ,price , enrolled,className,actualPrice ,ratingAndReviews}:{id:string; image:string;title: string ; instructor:string; price:number|string ; enrolled:any; className?:string ,actualPrice?:number , ratingAndReviews:any}) => {
-console.log(ratingAndReviews);
 
   return (
     <Link key={id} to={`/courses/${id}`}>

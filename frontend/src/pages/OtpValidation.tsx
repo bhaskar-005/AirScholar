@@ -21,7 +21,6 @@ const OtpValidation = () => {
     const handleVerifyEmail = (e:any)=>{
         e.preventDefault();
        const data ={...signUpdata,EmailOtp};
-       console.log(data);
        signUp(data,navigate,dispatch)
     }
   return (

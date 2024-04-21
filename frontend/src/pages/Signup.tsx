@@ -30,7 +30,6 @@ const {
   } = useForm<Inputs>()
   //onsubmit function
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
     if (data.password != data.confirmPassword) {
       toast.error('passwords do not match');
       return
