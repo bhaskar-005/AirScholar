@@ -2,6 +2,7 @@ import toast from "react-hot-toast";
 import { axiosCall } from "../axios-instence";
 import { paymentEndpoints } from "../api-endpoint";
 import { resetCart } from "../../redux/slice/cartSlice";
+import { setUser } from "../../redux/slice/ProfileSlice";
 
 
 
@@ -40,12 +41,15 @@ export const buyCourse = async(courses:any,token:any,userDetail:any,dispatch:Fun
                 access_token:token,
              }
          ) 
+         if(orderResponse.status == 202){
+            toast.dismiss(toastId);
+            toast.success('you are enrolled');
+         }
+
          if (orderResponse.status != 200) {
             throw new Error(orderResponse.data.message);
     
          }
-         console.log('orderResponse >>>>>',orderResponse);
-         
          //options
         const options={
             key:import.meta.env.VITE_RAZORPAY_KEY,
@@ -72,7 +76,6 @@ export const buyCourse = async(courses:any,token:any,userDetail:any,dispatch:Fun
         })
     
        } catch(error:any) {
-        console.log(error);
         toast(error.response.data.message, {
             icon: '🚫',
           });
@@ -97,6 +100,8 @@ const verifyPayment =async(data:any , token:any , navigate:Function, dispatch:Fu
         if (responce.status === 200) {
             toast.success('payment successful');
             //navigate and empty the cart
+
+            dispatch(setUser(responce.data.user))
             dispatch(resetCart());
             navigate('/dashboard/enrolled-courses');
         }

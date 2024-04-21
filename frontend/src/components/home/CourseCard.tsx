@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
-import { averageRating } from '../../util/averageRating';
+import { averageRating, averageRatingOnlyId } from '../../util/averageRating';
 
 const CourseCard = ({id, image ,title  , instructor ,price , enrolled,className,actualPrice ,ratingAndReviews}:{id:string; image:string;title: string ; instructor:string; price:number|string ; enrolled:any; className?:string ,actualPrice?:number , ratingAndReviews:any}) => {
- console.log(ratingAndReviews);
- 
+console.log(ratingAndReviews);
+
   return (
     <Link key={id} to={`/courses/${id}`}>
     <div key={id} className={`hover:scale-105 duration-100 ${className}`}>
@@ -19,7 +19,7 @@ const CourseCard = ({id, image ,title  , instructor ,price , enrolled,className,
                 <div className='flex flex-row items-center gap-2'>
                  <ReactStars
                       count={5}
-                      value={averageRating(ratingAndReviews)}
+                      value={averageRatingOnlyId(ratingAndReviews,enrolled)}
                       edit={false}
                       className='h-full w-full'
                       color2={'#ffd700'}

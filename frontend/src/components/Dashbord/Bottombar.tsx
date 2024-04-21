@@ -26,7 +26,8 @@ const Bottombar = () => {
     return <Loading/>
   }
   return (
-    <div className='lg:hidden flex'>
+  
+    <div className='lg:hidden flex h-[20%]'>
      <div className='fixed bottom-0 bg-blue-100 bg-opacity-70 flex flex-row justify-between backdrop-blur-sm sm:h-[70px] h-[50px] w-full z-10 border-t-[1px] border-t-gray-400'> 
          {
          sidebarLinks?.map((link)=>{

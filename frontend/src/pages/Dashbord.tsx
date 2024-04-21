@@ -8,7 +8,7 @@ const Dashbord = () => {
         <Sidebar />
         <Bottombar/>
           <div className='flex justify-center w-full'>
-              <div className='max-w-[1000px] w-11/12 mt-[66px] '>
+              <div className='max-w-[1000px] w-11/12 mt-[66px] md:mb-14 mb-[10px]'>
                  <Outlet/>
               </div>
          </div>

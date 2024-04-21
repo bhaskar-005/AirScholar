@@ -21,9 +21,11 @@ const Courses = () => {
   if (loading) {
     return <Loading/>
   }
+  console.log(course);
+  
   return (
-    <div className=' flex justify-center'>
-    <div className= ' max-w-[1200px] my-[80px] flex flex-row sm:gap-5 gap-1 flex-wrap jusrtify-center items-center'>
+    <div className=' flex justify-center '>
+    <div className= ' max-w-[1200px] my-[80px] flex flex-row sm:gap-5 gap-1 flex-wrap justify-center'>
        
      {
         course?.map((data:any)=>(
@@ -36,7 +38,7 @@ const Courses = () => {
             title={data.couresName}
             instructor={`${data.instructor.firstName} ${data.instructor.lastName}`}
             price={data.price}
-            enrolled={`${data.ratingAndReviews.length}`}
+            enrolled={data.studentsEnrolled.length}
             />
         ))
      }

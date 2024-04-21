@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { SetCategory, loading, setToken } from "../../redux/slice/authSlice";
 import { setUser } from "../../redux/slice/ProfileSlice";
 import { setCourse, setStep } from "../../redux/slice/courseSlice";
+import { tempCategory } from "../../data/NavbarLinks";
 
 
 //refreshToken
@@ -36,14 +37,15 @@ export const sendOtp = async (email: string, navigate:Function, dispatch:Functio
       checkUserPresent: true,
     });
 
+    dispatch(loading(false));
     toast.success("OTP Sent Successfully");
     navigate('/verify-email');
 
-  } catch (error) {
-    toast.error('OTP not sent. Please try again.');
-    console.error('Error sending OTP:', error);
+  } catch (error:any) {
+    dispatch(loading(false));
+    toast.error(`${error.response.data.message}`);
+    throw new Error('Error sending OTP:');
   }
-  dispatch(loading(false));
 };
 
 
@@ -132,18 +134,16 @@ export const resetPassword = async(data:any , navigate:Function , dispatch:Funct
 
 export const getCategory = async(dispatch:Function)=>{
    try {
+    dispatch(SetCategory(tempCategory));
     const res = await axiosCall(
       'get',
       categories.CATEGORIES_API
     )
-    console.log('category fetching..');
-    
     dispatch(SetCategory(res.data.data));
     
    } catch (error) {
      console.log(error);
-     toast.error('category not fetched')
-     
+     dispatch(SetCategory(tempCategory));
    }
 }
 

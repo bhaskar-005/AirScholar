@@ -3,10 +3,13 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import BlueButton from '../components/buttons/BlueButton';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../api/api-function/auth-api';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import MaxWidthWrapper from '../components/MaxWidthWrapper';
+import { RootState } from '../redux/store/Store';
+import LoadingFullscreen from '../components/LoadingFullscreen';
 
 const Login = () => {
+  const loading = useSelector((state:RootState)=>state.auth.loading);
   type Inputs = {
   
     email:string;
@@ -25,6 +28,8 @@ const {
     login(data , navigate , dispatch);
   }
   return (
+    <>
+    {loading && <LoadingFullscreen/>}
     <MaxWidthWrapper>
     <div className='flex justify-center mt-[90px]  '>
       <form  onSubmit={handleSubmit(onSubmit)} className='flex flex-col lg:w-[40%] w-[80%] gap-3'>
@@ -51,7 +56,7 @@ const {
     </form>
     </div>
     </MaxWidthWrapper>
-    
+    </>
 )
 }
 
