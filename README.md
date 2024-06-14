@@ -12,8 +12,8 @@ Welcome to AirScholar - Your destination for seamless online learning! Whether y
 - 🌟 **Reviews and Ratings**: Share your feedback and ratings to help maintain course quality and guide fellow learners.
 - 📊 **Instructor Dashboard**: Gain valuable insights into course performance and learner engagement to optimize your teaching experience.
 - 🔒 **Secure Authentication**: Protect your account with robust authentication measures for added security and peace of mind.
-- 🔑 **Forgot Password**: Easily reset your password if you forget it. ([Reset Password](#))
-- 🔄 **Password Change**: Update your password conveniently from your account settings. ([Change Password](#))
+- 🔑 **Forgot Password**: Easily reset your password if you forget it.
+- 🔄 **Password Change**: Update your password conveniently from your account settings.
 
 
 Visit [AirScholar](https://air-scholar.vercel.app/) to explore more!
