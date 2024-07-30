@@ -20,9 +20,9 @@ export const refreshToken = async(token:any , dispatch:Function)=>{
    } catch (error:any) {
     console.log(error);
     if (error.response.status == 500) {
+      localStorage.removeItem('token');
        toast.error('token expired');
        dispatch(setToken(null));
-       localStorage.removeItem(token);
     }
    }
    dispatch(loading(false));
